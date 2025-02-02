@@ -6,12 +6,12 @@
 
 #### Me:
 
-<img src="https://imgur.com/a/rYat84j" width="200">
+<img src="https://images2.imgbox.com/f3/a3/VZq52No8_o.jpg" width="200">
 
 #### My cat:
 
 
-<img src="https://imgur.com/XAB71q0" width="75">
+<img src="https://thumbs2.imgbox.com/f2/c3/cyvPXqb7_t.jpeg" width="75">
 
 
-<img src="https://imgur.com/hzJh4wT" width="75">
+<img src="https://thumbs2.imgbox.com/8b/32/g2dJfETQ_t.jpeg" width="75">
