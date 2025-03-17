@@ -21,4 +21,8 @@
   ### Example Destructor:
   ~Car();
 
+  ### Object Lifecycle
   
+  ## Instantiation to Destruction:
+  An object gets created in main and serves its purpose in the program. When its purpose is served then it should be destroyed to open up memory in the cache to allow another object to be instantiated.
+  It is important that an object manages its resources as to not use too much of a computer's resources.
