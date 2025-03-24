@@ -8,3 +8,4 @@ The public modifier includes methods which can be accesed by anyone. A benifit f
 data being accesed was incredibly sensitive data such as nuclear launch codes.
 
 ### Private:
+The private modifier typicaly includes data types such as: ints, strings, bools... etc. One benifit fot the Private modifier is hiding data that the user does not need acceses to such as nuclear launch codes!
