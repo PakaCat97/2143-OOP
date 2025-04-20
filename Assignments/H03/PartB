@@ -1,4 +1,4 @@
-### Here is an example of a child class inheriting from a parent class and overriding its method.
+ Here is an example of a child class inheriting from a parent class and overriding its method.
 
 #include <iostream>
 
