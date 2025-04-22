@@ -13,4 +13,7 @@ Compile time polymorphisim happens at compilation and uses the same function and
 but just uses different parameters within the same class.
 Runtime polymorphisim happens while the program is running and uses a specific implementation of a virtual function 
 defined in a base/parent/super class.
-Runtime polymorphisim requires 
+Runtime polymorphisim requires an iheritance relationship becuase it requires a virtual function in a base/parent/super 
+class to be overriden by a derived/child/sub class which allows dynamic behavior using base class pointers or references.
+
+
