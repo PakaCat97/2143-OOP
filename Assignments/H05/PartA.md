@@ -31,3 +31,5 @@ product.
 ### Benefits of Abstraction:
 Some benifits of abstraction in large scale projects include code reusability and managibility.
 Large projects will be overwhelming to write if code had to be constantly rewritten. Flexability of the code will help developers resuse code that has already be written and saves a lot of time and headache. Abstraction also helps break down the code into smaller manageable chunks and the developers who work on the code don't need to know every minute detail of the code they are working on to understand it.
+
+Short sentence: Abstraction reduces code complexity by hiding unnecessary details and exposing only essential features to the user.
