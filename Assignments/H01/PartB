@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Creature
+{
+private:
+	string name;
+	int hp; // Hit points or Health
+public:
+	Creature(string n = "Goblin", int health = 50) : name(n), hp(health) { cout << "A creature is being birthed" << endl; }
+
+	
+	void print()
+	{
+		cout << "Name: " << name << " " << "HP: " << hp << endl;
+	}
+
+	~Creature()
+	{
+		cout << "Creature is being deleted." << endl;
+	}
+
+};
+
+int main()
+{
+	Creature c1;
+	c1.print();
+
+	return 0;
+}
+
+
+The class above uses an initialzation list as a constructor. It initializes a creature to have the name goblin and sets its hp to 50. The constructor also displays a message showing that it did its job.
+Once the program ends is when the object that was initialized in main is destroyed.

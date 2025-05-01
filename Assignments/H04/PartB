@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Base/Parent/Super class
+class Shape
+{
+public:
+	void virtual draw() const
+	{
+		cout << "Shape is being drawn..." << endl;
+
+	}
+};
+
+// Derived/Child/Sub class
+class Rectangle : public Shape
+{
+public:
+	void draw() const override
+	{
+		cout << "A rectangle is being drawn..." << endl;
+	}
+};
+
+int main()
+{
+	//Creating objects
+	Shape s;
+	Rectangle r;
+
+	//storing shape pointers
+	vector <Shape*> shapes;
+	shapes.push_back(&s);
+	shapes.push_back(&r);
+
+	//Call draw() for each shape
+	for (Shape* s : shapes)
+	{
+		s->draw(); // Correct draw is chosen at runtime
+	}
+	return 0;
+}
