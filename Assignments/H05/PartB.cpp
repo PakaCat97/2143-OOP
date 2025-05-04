@@ -4,19 +4,75 @@
 
 using namespace std;
 
-// Abstract Class
+// Abstract Class (interface)
 class BankAccount
 {
+    public:
+    virtual void deposit(double amount) = 0;
+    virtual void withdraw(double amount) = 0;
+    virtual double getBalance() const = 0;
 
+    virtual ~BankAccount() = default;  //Destructor
 };
 
-class SavingsAccount
+// Concrete Class
+class SavingsAccount : public BankAccount
 {
+    private:
+    double balance;
+    string holder;
 
+    // The const key word ensures data wont be changed just read
+    void logTransaction(string type, double amount) const
+    {
+        cout << "LOG: " << type << "of $" << amount << "for " << holder << endl; 
+    }
 
+    void encryptTransaction(double amount) const
+    {
+        cout << "ENCRYPT: Securing transaction of $" << amount << endl;
+    }
+
+    void balanceLedger() const
+    {
+        cout << "BALANCE: Balancing ledger..." << endl;
+    }
+
+    public:
+    // Defualt constructer init list
+    SavingsAccount(const string &accountHolder) : balance(0.0), holder(accountHolder){};
+
+    // Override + final means no one can override code further
+    void deposit (double amount) override final 
+    {
+        logTransaction(holder, amount);
+        encryptTransaction(amount);
+        balance += amount; //Take whats in balance and add the amount deposited to it
+        balanceLedger();
+    }
+
+    // Override on its own means that the method can be overriden further in another class
+    void withdraw(double amount) override
+    {
+        logTransaction(holder, amount);
+        encryptTransaction(amount);
+        balance -= amount; //Take whats in balance and subtract amount from it
+        balanceLedger();
+    }
+
+    double getBalance() const override {
+        return balance;
+    }
 };
 
 int main()
 {
+    SavingsAccount myAccount("Carlos");
+
+    myAccount.deposit(1000.00);
+    myAccount.withdraw(200.00);
+
+    cout << "Current balance is: $" << myAccount.getBalance() << endl;
+    return 0;
 
 }
