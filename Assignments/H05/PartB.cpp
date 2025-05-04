@@ -67,12 +67,14 @@ class SavingsAccount : public BankAccount
 
 int main()
 {
-    SavingsAccount myAccount("Carlos");
+    // pointer to BankAccount class but it actually points to a SavingsAccount object
+    BankAccount* account = new SavingsAccount("Carlos");
 
-    myAccount.deposit(1000.00);
-    myAccount.withdraw(200.00);
-
-    cout << "Current balance is: $" << myAccount.getBalance() << endl;
+    account->deposit(100);  // Polymorphic call
+    account->withdraw(50);  // Polymorphic call
+    cout << "Balance: $" << account->getBalance() << endl;
+    // The calls call the methods in SavingsAccount
+    delete account;
     return 0;
 
 }
